@@ -1,0 +1,38 @@
+{% extends "Main.html" %}
+
+{% block topmenu %}
+{% include 'TopMenu.html'%}
+{% endblock %}
+{% block content %}
+<div class="container mt-5 navbar">
+
+    {% for category in categoryName %}
+    <a href="/category/{{category.id}}/" class="btn btn-secondary btn-beige ml-1">{{ category.categoryName }}</a>
+    {% endfor %}
+</div>
+
+<div class="container mt-5">
+    <div id="post-data" class="row">
+        {% for mass_card in mass %}
+        <div class="col-3">
+            <div class="card" >
+                <a href="composition/{{mass_card.id}}"  class="textbase">
+                    <img src="{{ url_for('static', filename=mass_card.foto) }}" class="card-img-top" alt="...">
+                    <div class="card-body" >
+                        <p class="card-text textbase">{{ mass_card.nameOfdish }}</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-text mt-2">{{ mass_card.price }}₽</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+

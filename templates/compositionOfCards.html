@@ -1,0 +1,31 @@
+{% extends "composition.html" %}
+
+{% block menu %}
+{% include 'TopMenu.html'%}
+{% endblock %}
+{% block compound %}
+<div class="container mt-5">
+    <div id="post-data" class="row">
+        {% for mass_card in mass %}
+        <div class="col-6">
+            <img src="{{ url_for('static', filename=mass_card.foto) }}" class="card-img-top" alt="...">
+        </div>
+        <div class="col-6">
+            <h4 class="card-title textbase">{{ mass_card.nameOfdish }}</h4>
+            <p>Состав</p>
+            <p>Выберите вес блюда</p>
+            <div class="row">
+                <div class="col-6">
+                    <input type="radio" id="weightportions" name="radio-group" value="weightportions">
+
+                    <label for="weightportions">{{mass_card.weightportions}}г</label>
+                </div>
+                <div class="col-6">
+                    <p>{{mass_card.price}}₽</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

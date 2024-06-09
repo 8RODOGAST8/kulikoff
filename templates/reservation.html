@@ -1,0 +1,38 @@
+{% extends "Tablereservation.html" %}
+
+{% block menu %}
+{% include 'TopMenu.html'%}
+{% endblock %}
+{% block compound %}
+<form method="post">
+<div class="container mt-5">
+        <h3>Зарезервировать стол</h3>
+        <div class="col-6">
+         <h4>ФИО</h4>
+        <input name="fio" size = "100" required/>
+        </div>
+    <div class="col-6">
+         <h4>Телефон</h4>
+        <input name="telephonenumber" size = "100"  required pattern="+[78]{1}[0-9]{10}"/>
+    </div>
+
+<div class="col-6">
+          <h4>Количество гостей</h4>
+             <input name="numberOfGuests" size = "20" type = "number" min="1" max = "15" step = "1" value="1" />
+</div>
+    <div class="col-6">
+         <h4>Дата и время</h4>
+    <input name="bookingDate" type="datetime-local" />
+        </div>
+<div class="col-6 textblock">
+    <input type="submit" value="Отправить " onclick="showSuccessMessage()">
+</div>
+</div>
+
+</form>
+<script>
+        function showSuccessMessage() {
+            alert("Вы успешно зарезервировали");
+        }
+    </script>
+{% endblock %}

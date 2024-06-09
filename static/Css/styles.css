@@ -1,0 +1,14 @@
+
+    .textbase{
+    text-decoration:none;
+    color:black;
+    background-color: #D2B48C;
+    }
+   body {
+  background-color: #FFE4C4;
+}
+.btn-beige {
+  background-color: #D2B48C; /* бежевый цвет */
+  color: black ; /* текстовый цвет */
+  border-color: black; /* цвет границы */
+}

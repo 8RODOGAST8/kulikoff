@@ -1,0 +1,15 @@
+﻿    {% extends 'main.htm' %}
+    {% block main_block %}
+    <h1 class="mt-5">Арендаторы</h1>
+    <table class="table">
+        {% for obj in items %}
+            <tr>
+                <td>{{ obj.id }}</td>
+                <td>{{ obj.title }}</td>
+                <td>{{ obj.square }}</td>
+                <td>{{ obj.description }}</td>
+
+            </tr>
+        {% endfor %}
+    </table>
+    {% endblock %}

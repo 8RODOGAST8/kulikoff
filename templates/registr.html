@@ -1,0 +1,38 @@
+{% extends "login.html" %}
+
+{% block menu %}
+{% include 'TopMenu.html'%}
+{% endblock %}
+ {% block log %}
+<form method="post">
+<div class="container mt-5">
+        <h3>Регистрация</h3>
+        <div class="col-6">
+         <h4>Логин</h4>
+        <input name="user_name" size = "100" required/>
+        </div>
+    <div class="col-6">
+         <h4>Пароль</h4>
+        <input name="password" size = "100" required />
+    </div>
+  <div class="text-box textblock_1 " >
+        <input type="submit" class="border-radius btn btn-white btn-animate  " value="Регистрация"></input>
+  </div>
+
+    <div class="text-box ">
+
+        <a href="/login/" class="border-radius btn btn-white btn-animate">Войти</a>
+
+</div>
+</div>
+</form>
+<script>
+        function showSuccessMessage() {
+            alert("Регистрация прошла успешно");
+        }
+    </script>
+{% endblock %}
+<body>
+
+</body>
+</html>

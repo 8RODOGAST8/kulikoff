@@ -1,0 +1,49 @@
+{% extends "contact.html" %}
+
+{% block menu %}
+{% include 'TopMenu.html'%}
+{% endblock %}
+
+{% block log %}
+ <style>
+
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+    <main>
+        <section>
+            <h2>Контакты</h2>
+            <p>Телефон: +7 (111) 222-33-44</p>
+            <p>@mail: berest@mail.com</p>
+            <p>Адрес: г. Санкт-Петербург, ул. Кожевенная линия, д. 1</p>
+            <p>Режим работы: Каждый день 8:00 - 23:00</p>
+        </section>
+
+        <section>
+            <h2>Наше местоположение</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d594.4893541216315!2d30.249682796689243!3d59.921922292437785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469630c674b71eb3%3A0x65c390919936cdb!2z0JrQvtC20LXQstC10L3QvdCw0Y8g0LvQuNC90LjRjywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5OTEwNg!5e0!3m2!1sru!2sru!4v1717529208309!5m2!1sru!2sru" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+{% endblock %}

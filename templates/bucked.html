@@ -1,0 +1,48 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Корзина</title>-->
+<!--    <style>-->
+<!--        table {-->
+<!--            border-collapse: collapse;-->
+<!--            width: 100%;-->
+<!--        }-->
+<!--        th, td {-->
+<!--            padding: 1px;-->
+<!--            text-align: left;-->
+<!--            border-bottom: 1px solid #ddd;-->
+<!--        }-->
+<!--        tr:hover {-->
+<!--            background-color: #f5f5f5;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Корзина</h1>-->
+<!--    {% if bucket %}-->
+<!--        <table>-->
+<!--            <tr>-->
+<!--                <th>Блюдо</th>-->
+<!--                <th>Цена</th>-->
+<!--                <th>Количество</th>-->
+<!--                <th>Итого</th>-->
+<!--            </tr>-->
+<!--            {% for item in bucket %}-->
+<!--                <tr>-->
+<!--                    <td>{{ item.dish.nameOftheDish }}</td>-->
+<!--                    <td>{{ item.dish.price }}</td>-->
+<!--                    <td>{{ item.quantity }}</td>-->
+<!--                    <td>{{ item.dish.price * item.quantity }}</td>-->
+<!--                </tr>-->
+<!--            {% endfor %}-->
+<!--            <tr>-->
+<!--                <td colspan="3" style="text-align: right;"><strong>Общая сумма:</strong></td>-->
+<!--                <td><strong>{{ total_price }}</strong></td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--    {% else %}-->
+<!--        <p>Ваша корзина пуста.</p>-->
+<!--    {% endif %}-->
+<!--</body>-->
+<!--</html>-->
